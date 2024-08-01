@@ -1,0 +1,105 @@
+/* Общие стили для страницы */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    background: url('pexels-eberhardgross-1366919.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+}
+
+.container {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    max-width: 400px; /* Ограничиваем ширину контейнера */
+    width: 100%;
+}
+
+.profile {
+    margin-bottom: 20px;
+}
+
+.profile-img {
+    width: 100px; /* Размер изображения */
+    height: 100px;
+    border-radius: 50%; /* Круглая форма */
+    object-fit: cover; /* Обрезка изображения по форме круга */
+    border: 3px solid #fff; /* Белая рамка вокруг изображения */
+}
+
+.name {
+    margin-top: 10px;
+    font-size: 2rem;
+    color: #fff;
+}
+
+/* Стили для ссылок */
+.links {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрируем ссылки по горизонтали */
+    gap: 15px;
+}
+
+.link {
+    display: inline-block;
+    padding: 15px 25px;
+    text-decoration: none;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.2); /* Прозрачный белый фон */
+    border: 2px solid #fff; /* Белая рамка */
+    border-radius: 5px;
+    font-size: 1.2rem;
+    max-width: 300px; /* Устанавливаем максимальную ширину для ссылок */
+    width: 100%; /* Ссылки занимают всю доступную ширину контейнера, но не больше max-width */
+    text-align: center; /* Центрируем текст внутри ссылки */
+    transition: background-color 0.3s, transform 0.3s;
+    box-sizing: border-box; /* Учитываем границы и отступы в ширине */
+}
+
+.link:hover {
+    background: rgba(255, 255, 255, 0.3); /* Более светлый прозрачный белый фон при наведении */
+    border-color: #fff; /* Рамка остается белой */
+    transform: scale(1.05);
+}
+
+/* Медиа-запросы для адаптивности */
+@media (max-width: 768px) {
+    .profile-img {
+        width: 80px; /* Уменьшаем размер изображения */
+        height: 80px;
+    }
+
+    .name {
+        font-size: 1rem; /* Уменьшаем размер шрифта имени */
+    }
+
+    .link {
+        padding: 12px 20px; /* Уменьшаем паддинг */
+        font-size: 1rem; /* Уменьшаем размер шрифта ссылок */
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-img {
+        width: 60px; /* Еще меньше размер изображения */
+        height: 60px;
+    }
+
+    .name {
+        font-size: 0.9rem; /* Еще меньше размер шрифта имени */
+    }
+
+    .link {
+        padding: 10px 15px; /* Еще меньше паддинг */
+        font-size: 0.9rem; /* Еще меньше размер шрифта ссылок */
+        max-width: 100%; /* Ссылка занимает всю доступную ширину на мобильных устройствах */
+    }
+}
